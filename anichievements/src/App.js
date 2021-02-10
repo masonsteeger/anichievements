@@ -6,7 +6,7 @@ import './App.css';
 
 const App = () => {
   
-  const [newUser, setUser] = useState('true')
+  const [newUser, setUser] = useState({})
 
   useEffect(() => {
     
@@ -15,7 +15,7 @@ const App = () => {
   return (
       <div className="App">
         <h1>Anichievements</h1>
-        {localStorage.id ? <Home setUser={setUser}/> : <Username setUser={setUser}/>}
+        {localStorage.id ? <Home user={newUser} setUser={setUser}/> : <Username setUser={setUser}/>}
       </div>
 
   );

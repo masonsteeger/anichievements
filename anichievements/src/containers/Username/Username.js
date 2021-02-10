@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { gql, useLazyQuery } from '@apollo/client'
-import { printIntrospectionSchema } from 'graphql';
 
 
 const GET_USER = gql`
@@ -8,6 +7,16 @@ const GET_USER = gql`
     User(name: $name){
       id
       name
+      statistics{
+        anime{
+          minutesWatched
+          episodesWatched
+          genres{
+            genre
+            count
+          }
+        }
+      }
     }
   }`
 
@@ -16,7 +25,7 @@ const Username = (props) => {
 
     const [input, setInput] = useState('');
     
-    const [getUser, {loading, data}] = useLazyQuery(GET_USER)
+    const [getUser, {loading, error, data}] = useLazyQuery(GET_USER)
 
     const onChangeHandler = (e) => {
       e.preventDefault()
@@ -29,13 +38,14 @@ const Username = (props) => {
     }
 
 
-    if (loading) return <p>Loading...</p>
+    if (loading) return <p>Loading... DO NOT REFRESH PAGE</p>
+    if(error) return <p>Error! {error.message}</p>
     if (data) localStorage.setItem('id', data.User.id)
 
     return(
         <div>
             {
-                data ? props.setUser('true'): 
+                data ? props.setUser(data.User): 
                 <div>
                   <form>
                     <input type='text' value={input} onChange={(e) => onChangeHandler(e)}/>
