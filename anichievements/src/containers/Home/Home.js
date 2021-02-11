@@ -27,18 +27,18 @@ const Home = (props) => {
 
     const {loading, error, data} = useQuery(GET_LISTS, {
         variables:{
-            id: localStorage.getItem('id')
+            id: sessionStorage.getItem('id')
         }
     })
 
     useEffect(() => {
-
+        
 
     }, [props.user])
 
     const onRemoveId = () => {
-        localStorage.removeItem('id')
-        props.setUser({})
+        sessionStorage.removeItem('id')
+        props.setUser(null)
     }
 
     if(loading) return <p>Loading... DO NOT REFRESH PAGE</p>
@@ -54,7 +54,7 @@ const Home = (props) => {
             <h3>Episodes Watched: {props.user.statistics.anime.episodesWatched}</h3>
             {props.user.statistics.anime.genres.map((genre) => {
                 return(
-                    <div>
+                    <div key={genre.genre}>
                         <p>{genre.genre}: {genre.count}</p>
                     </div>
                 )

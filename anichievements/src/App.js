@@ -5,17 +5,24 @@ import './App.css';
 
 
 const App = () => {
+
+  window.onload = function(){
+    if(sessionStorage.getItem("id")){
+        sessionStorage.clear();
+        console.log(sessionStorage.id)
+    }
+  }
   
-  const [newUser, setUser] = useState({})
+  const [newUser, setUser] = useState(null)
 
   useEffect(() => {
-    
+
   }, [newUser])
 
   return (
       <div className="App">
         <h1>Anichievements</h1>
-        {localStorage.id ? <Home user={newUser} setUser={setUser}/> : <Username setUser={setUser}/>}
+        {newUser ? <Home user={newUser} setUser={setUser}/> : <Username setUser={setUser}/>}
       </div>
 
   );

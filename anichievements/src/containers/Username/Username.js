@@ -40,7 +40,7 @@ const Username = (props) => {
 
     if (loading) return <p>Loading... DO NOT REFRESH PAGE</p>
     if(error) return <p>Error! {error.message}</p>
-    if (data) localStorage.setItem('id', data.User.id)
+    if (data) sessionStorage.setItem('id', data.User.id)
 
     return(
         <div>
