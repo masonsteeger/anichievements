@@ -16,9 +16,13 @@ img{
 
 .achievement-top{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .achievement-text{
+    margin: auto
+}
 
+.achievement-icon{
+    margin: auto
 }
