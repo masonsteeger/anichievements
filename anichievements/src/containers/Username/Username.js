@@ -11,7 +11,7 @@ const GET_USER = gql`
         anime{
           minutesWatched
           episodesWatched
-          genres{
+          genres(sort: PROGRESS_DESC){
             genre
             count
           }
