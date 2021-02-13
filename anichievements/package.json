@@ -1,6 +1,9 @@
 {
   "name": "anichievements",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.3.9",
@@ -9,7 +12,6 @@
     "@testing-library/user-event": "^12.1.10",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
-    "node": "^15.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
