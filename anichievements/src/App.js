@@ -21,7 +21,7 @@ const App = () => {
 
   return (
       <div className="App">
-        <h1>Anichievements</h1>
+        <h1 className='header'>ANICHIEVEMENTS</h1>
         {newUser ? <Home user={newUser} setUser={setUser}/> : <Username setUser={setUser}/>}
       </div>
 

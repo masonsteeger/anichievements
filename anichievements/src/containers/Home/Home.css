@@ -1,0 +1,11 @@
+.footer{
+    height: 100px;
+}
+.achievement-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.section-title{
+    font-size: 52px;
+}
