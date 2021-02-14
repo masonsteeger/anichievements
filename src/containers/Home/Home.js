@@ -88,10 +88,6 @@ const Home = (props) => {
 
     }, [props.user])
 
-    const onRemoveId = () => {
-        sessionStorage.removeItem('id')
-        props.setUser(null)
-    }
 
     if(loading) return <Spinner />
     if(error) return <p>Error! {error.message}</p>

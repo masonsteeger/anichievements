@@ -129,7 +129,7 @@ const Achivement = (props) => {
                         <h3>{currentLevel.subtitle}</h3>
                     </div>
                     <div className='achievement-icon'>
-                        <img src={currentLevel.icon}/>
+                        <img src={currentLevel.icon} alt={props.title}/>
                     </div>
                 </div>
                 {currentLevel === props.level4 ? 

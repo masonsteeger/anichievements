@@ -60,7 +60,7 @@ const Username = (props) => {
          
                   <hr />
                   <div className='explanation'>
-                    <h2>Anichievements is a project by Mason Steeger inspired by MALGraph that is an extenstion of your AniList profile. Unfortunately since MAL has restricted the use of their API, I moved over to AniList and the achievements I wished to complete on MALGraph are no longer up to date, so I decided to make an achievement list myself using AniList's database!!</h2>
+                    <h2>Anichievements is a project by Mason Steeger inspired by MALGraph that is an extenstion of your AniList profile. Unfortunately since MAL restricted the use of their API a few years back, I moved over to AniList and the achievements I wished to complete on MALGraph are no longer up to date, so I decided to make an achievement list myself using AniList's database!</h2>
                     <h2>In order to use this website you need to have an AniList profile (which you can create <a target="_blank" rel="noreferrer" href='https://anilist.co/signup'>here</a>) and some anime in your completed list! Once you have that, just type your username in the input box and you'll see your achievements!</h2>
                     <h2>Any questions, comments, concerns, or suggestions can be addressed to <a href="mailto:masonsteeger@gmail.com">Mason Steeger</a> via this email with the subject reading "Anichievements".</h2>
                     <h2>Happy Watching!</h2>
