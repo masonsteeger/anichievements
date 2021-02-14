@@ -1,3 +1,6 @@
+hr{
+  margin: 40px 40px;
+}
 input[type=text] {
   width: 50%;
   text-align: center;
@@ -7,6 +10,16 @@ input[type=text] {
   box-sizing: border-box;
 }
 .explanation{
-  width: 65%;
+  width: 75%;
   margin: auto;
+}
+
+
+@media only screen and (max-width: 812px){
+  input[type=text] {
+    font-size: 18px;
+  }
+  .explanation{
+    width: 85%;
+  }
 }

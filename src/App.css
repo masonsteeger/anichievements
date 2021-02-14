@@ -1,6 +1,9 @@
+body{
+  background-color:  #253237;
+}
+
 .App {
   text-align: center;
-  background-color:  #253237;
   color: #E0FBFC;
   padding: 40px 0;
 }
@@ -8,4 +11,32 @@
 .header{
   font-size:60px ;
   text-shadow: 0 0 30px #5C6B73;
+}
+
+h1{
+  font-family: "Audiowide";
+  font-size: 24px;
+}
+
+h2{
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+}
+h3{
+  font-family: "Roboto-Bold";
+  font-size: 18px;
+}
+h4{
+  font-family: "Roboto-Bold";
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 812px){
+  .header{
+    font-size: 30px ;
+  }
+
+  h2{
+    font-size: 16px;
+  }
 }

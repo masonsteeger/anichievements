@@ -125,7 +125,7 @@ const Achivement = (props) => {
                 <h1>{props.title.toUpperCase()} LEVEL {currentLevel.level}</h1>
                 <div className='achievement-top'>
                     <div className='achievement-text'>
-                        <h2>{currentLevel.title}</h2>
+                        <h2 className='achievement-title'>{currentLevel.title}</h2>
                         <h3>{currentLevel.subtitle}</h3>
                     </div>
                     <div className='achievement-icon'>

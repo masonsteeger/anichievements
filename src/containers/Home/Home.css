@@ -9,3 +9,12 @@
 .section-title{
     font-size: 52px;
 }
+
+@media only screen and (max-width: 812px){
+    .section-title{
+        font-size: 32px;
+    }
+    .achievement-section{
+        flex-direction: column;
+    }
+}

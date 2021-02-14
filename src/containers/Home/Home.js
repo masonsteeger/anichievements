@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
-import Achievement from '../Achievement/Achievement';
-
+import Achievement from '../../components/Achievement/Achievement';
+import Spinner from '../../components/Spinner/Spinner'
 import comp1 from '../../icons/comp-1.png';
 import comp2 from '../../icons/comp-2.png';
 import comp3 from '../../icons/comp-3.png';
@@ -93,12 +93,15 @@ const Home = (props) => {
         props.setUser(null)
     }
 
-    if(loading) return <p>Loading... DO NOT REFRESH PAGE</p>
+    if(loading) return <Spinner />
     if(error) return <p>Error! {error.message}</p>
 
    
     if(data){
-        const compLen = data.MediaListCollection.lists.filter(list => list.name === 'Completed')[0].entries.length
+        let compLen = data.MediaListCollection.lists.filter(list => list.name === 'Completed')[0]
+        if (compLen !== undefined){
+            compLen = compLen.entries.length
+        }
         const dropLen = data.MediaListCollection.lists.filter(list => list.name === 'Dropped')[0]
         let dropNum = 0;
         if(dropLen){
