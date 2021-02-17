@@ -6,6 +6,7 @@ import comp1 from '../../icons/comp-1.png';
 import comp2 from '../../icons/comp-2.png';
 import comp3 from '../../icons/comp-3.png';
 import comp4 from '../../icons/comp-4.png';
+import endurance from '../../icons/endurance.png';
 import episodes1 from '../../icons/episodes-1.png';
 import episodes2 from '../../icons/episodes-2.png';
 import episodes3 from '../../icons/episodes-3.png';
@@ -136,7 +137,7 @@ const Home = (props) => {
                     level3={{level: 3, title:'CULTURED OTAKU' , subtitle:'One thousand anime watched. That is a whole lot of anime. By this point your room is filled with wall scrolls, figures, body pillows and assorted anime gear.' ,icon: comp3, nextLevel: 5000}}
                     level4={{level: 4, title:'ENLIGHTENED ONE' , subtitle:'You\'ve done it. 5000+ anime watched. You ascend into the heavens after discovering the truth and reason of existence and will graciously bestow your knowldege on mortals below you as you see fit.' ,icon: comp4}}
                 />
-                {compLen > 20 && dropNum === 0 ? <Achievement type='dropped'/> : null}
+                {compLen > 20 && dropNum === 0 ? <Achievement type='dropped' title='ENDURANCE AWARD' icon={endurance}/> : null}
             </div>
 
             <h1 className='section-title'>GENRE ACHIEVEMENTS</h1>

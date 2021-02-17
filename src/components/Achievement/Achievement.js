@@ -67,9 +67,17 @@ const Achivement = (props) => {
         if(props.type === 'dropped'){
             return (
                 <div className='achievement'>
-                    <h1>ENDURANCE AWARD</h1>
-                    <h3>You've watched over 20 anime and dropped 0!</h3>
-                    <Progress size='big' total='100' value='100' success></Progress>
+                    <h1>{props.title}</h1>
+                    <div className='achievement-top'>
+                        <div className='achievement-text'>
+                            <h2>ZERO DROPPED</h2>
+                            <h3>You've watched over 20 anime and dropped NONE OF THEM! You are praised by everyone for showing true signs of strength even in the most unfortunate circumstances. We all salute your efforts.</h3>
+                        </div>
+                        <div className='achievement-icon'>
+                            <img src={props.icon} alt={props.title}/>
+                        </div>
+                    </div>
+                    <div className='progress-bar'><Progress size='big' total='100' value='100' success></Progress><h4></h4></div>
                 </div>
             )
         }
